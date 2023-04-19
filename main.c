@@ -3,7 +3,7 @@
 //
 #include <stdio.h>
 #include "functions.h"
-
+#include "functions.c"
 void runApp() {
     printf("Running the app...\n");
 }
@@ -13,27 +13,8 @@ void showInstructions() {
 }
 
 int main() {
-    int choice;
-
-    do {
-        displayMenu();
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
-
-        switch(choice) {
-            case 1:
-                runApp();
-                break;
-            case 2:
-                showInstructions();
-                break;
-            case 3:
-                printf("Exiting the program...\n");
-                break;
-            default:
-                printf("Invalid choice. Please try again.\n");
-        }
-    } while(choice != 3);
+    int Lshapes[30][15];
+    displayMenu(Lshapes);
 
     return 0;
 }

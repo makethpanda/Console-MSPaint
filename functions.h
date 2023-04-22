@@ -5,8 +5,8 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-void displayMenu(int list[]);
-void addshape(int list[]);
+void displayMenu(int list[], int nb);
+void addshape(int list[], int nb);
 
 
 void makecircle(int x, int z, int y);

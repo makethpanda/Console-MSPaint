@@ -13,8 +13,12 @@ void showInstructions() {
 }
 
 int main() {
-    int Lshapes[30][15];
-    displayMenu(Lshapes);
+    int Lshapes[30];
+    Point point[30];
+
+
+    int nb = 0;
+    displayMenu(Lshapes, nb);
 
     return 0;
 }

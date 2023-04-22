@@ -9,19 +9,16 @@ typedef struct {
     int pos_y;
 }Point;
 
-typedef struct stack {
-    struct Point;
-};
 
 
-void addshape(int list[]){
+void addshape(int list[],int nb){
     int choice = 0;
     printf("1- Add a point\n");
     printf("2- Add a line\n");
     printf("3- Add a circle\n");
     printf("4- Add a square\n");
     printf("5- Add a rectangle\n");
-    printf("6- Add a poygon\n");
+    printf("6- Add a polygon\n");
     printf("7- return to previous menu\n");
     scanf("%d", &choice);
     while (choice < 1 || choice > 7) {
@@ -29,29 +26,12 @@ void addshape(int list[]){
         scanf("%d", &choice);
     }
     if (choice == 7){
-        displayMenu(list);
+        displayMenu(list, nb);
     }
     if (choice == 1){
         int x,y;
         printf("give the coordinate of x and y :\n");
         scanf("%d %d", &x,&y);
-
-
-    }
-    if (choice == 2){
-        displayMenu(list);
-    }
-    if (choice == 3){
-        displayMenu(list);
-    }
-    if (choice == 4){
-        displayMenu(list);
-    }
-    if (choice == 5){
-        displayMenu(list);
-    }
-if (choice == 6){
-displayMenu(list);
 }
 
 }
@@ -63,7 +43,7 @@ void displaylist(){
 
 
 // Function to display the menu options
-void displayMenu(int list[]) {
+void displayMenu(int list[], int nb) {
     int choice = 0;
     printf("Please choose an option :\n");
     printf("1. Add a shape\n");
@@ -77,7 +57,7 @@ void displayMenu(int list[]) {
         scanf("%d",&choice);
     }
     if (choice == 1){
-        addshape(list);
+        addshape(list, nb);
     }
     if (choice == 2){
         displaylist();
